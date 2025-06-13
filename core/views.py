@@ -1,7 +1,17 @@
+from datetime import datetime
 from django.shortcuts import render
 
 from django.http import HttpResponse
 
-def index(request):
-    return render(request,'core/index.html')
-# Create your views here.
+def probandoTemplate(self):
+    nombre= "Fernando"
+    apellido= "Juarez"
+
+    
+    diccionario= {
+        "nombre": nombre,
+        "apellido": apellido,
+        "dia": datetime.now().date(),
+
+    }
+
